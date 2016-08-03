@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   #GET /users/new
   def new
     @user = User.new
+  end
 
   #POST /users
   def create
@@ -36,7 +37,7 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
-  
+
   def user_params
     params.require(:user).permit(:name, :email, :password,
     :password_confirmation)
