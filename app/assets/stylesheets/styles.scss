@@ -48,9 +48,22 @@ nav {
   }
 }
 
+div > ul {
+  list-style: url('assets/images/gem.png');
+}
 
 img {
   margin: 0 auto;
+}
+
+label {
+  display: block;
+  max-width: 100%;
+}
+
+input {
+  display: inline-block;
+  max-width: 70%;
 }
 
 // CLASSES
@@ -67,13 +80,13 @@ img {
 }
 
 .logo {
-  font-size: 1.5em;
-  vertical-align: middle;
+  font-size: 1.3em;
 }
 
 .btn {
-  background-color: $red;
-  color: $off-white;
+  background-color: $yellow;
+  color: $red;
+  border: none;
   border-radius: 10px;
   padding: 5px;
   -webkit-transition-duration: 0.4s;
@@ -89,7 +102,7 @@ img {
 
 #bigtab {
   height: 30px;
-  width: 20%;
+  min-width: 25%;
   text-transform: uppercase;
   letter-spacing: .3em;
   padding: 5px;
