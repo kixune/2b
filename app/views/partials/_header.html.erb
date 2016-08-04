@@ -10,7 +10,7 @@
 
         <% if logged_in? %>
 
-        <li class="container tab"><%= link_to "#{@current_user.name}",     "/profile/#{current_user.id}" %></li>
+        <li class="container tab"><%= link_to "#{@current_user.name}",     "/users/#{current_user.id}" %></li>
         <li class="container tab"><%= link_to "Logout", '/logout', method: "delete"    %></li>
 
         <% else %>
