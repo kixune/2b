@@ -1,0 +1,8 @@
+<% provide(:title, @user.name) %>
+<% provide(:button_text, "Save Changes") %>
+<h1>Update Your Info</h1>
+
+<%= render '/partials/form', user: @user %>
+
+<%= link_to 'Show', @user %> 
+<%= link_to 'Back', users_path %>
