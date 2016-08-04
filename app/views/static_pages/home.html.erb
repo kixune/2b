@@ -2,5 +2,9 @@
 <div class="container">
   <h1>Welcome to RubySmart</h1>
   <%= link_to image_tag("bijou.png", id: "firstgem", alt: 'gem'), '/about' %>
-  <%= link_to "Register Here", '/register', class: "btn" %>
+  <% if logged_in? %>
+    <h2>Have a wonderful day!</h2>
+  <% else %>
+    <%= link_to "Register Here", '/register', class: "btn" %>
+  <% end %>
 </div>

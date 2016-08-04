@@ -4,17 +4,18 @@
   </div>
     <nav>
       <ul>
+        <% if logged_in? %>
+        <li class="container tab"><%= link_to "Gemstones",   '/gemstones' %></li>
+        <li class="container tab"><%= link_to "About",   '/about' %></li>
+        <li class="container tab"><%= link_to "Help",   '/help' %></li>
+        <li class="container tab"><%= link_to "#{@current_user.name}",     "/users/#{current_user.id}" %></li>
+        <li class="container tab"><%= link_to "Logout", '/logout', method: "delete"    %></li>
+        <% else %>
         <li class="container tab"><%= link_to "Home",   '/home' %></li>
         <li class="container tab"><%= link_to "About",   '/about' %></li>
         <li class="container tab"><%= link_to "Help",   '/help' %></li>
-
-        <% if logged_in? %>
-
-        <li class="container tab"><%= link_to "#{@current_user.name}",     "/users/#{current_user.id}" %></li>
-        <li class="container tab"><%= link_to "Logout", '/logout', method: "delete"    %></li>
-
-        <% else %>
         <li class="container tab"><%= link_to "Login", '/login' %></li>
+        <span id="regis"><%= link_to "Register now!", '/register' %></span>
         <% end %>
       </ul>
     </nav>

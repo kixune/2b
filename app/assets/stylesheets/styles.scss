@@ -31,13 +31,14 @@ a {
 }
 
 nav {
-  display: inline-block;
-  width: 70%;
+  width: 75%;
   padding: 0;
   vertical-align: bottom;
+  display: inline-block;
   ul {
     margin: 0;
     padding: 0;
+    display: inline;
     li {
       letter-spacing: 0.1em;
       list-style: none;
@@ -70,6 +71,13 @@ input {
   max-width: 70%;
 }
 
+table {
+  margin: 2em auto;
+  th, td {
+    text-align: left;
+    line-height: 1.8em;
+  }
+}
 // CLASSES
 .container {
   height: 100%;
@@ -79,7 +87,7 @@ input {
   text-align: center;
 }
 
-.center{
+.centerlist{
   width: 40%;
   margin:0 auto;
   text-align:left;
@@ -112,7 +120,7 @@ input {
 
 #bigtab {
   height: 30px;
-  min-width: 25%;
+  min-width: 21%;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .3em;
@@ -120,7 +128,19 @@ input {
   display: inline-block;
 }
 
+#regis {
+  font-size: 0.7em;
+  a {
+    color: lighten($red, 33%);
 
+    &:hover {
+      color: $yellow;
+    }
+    &:active {
+      color: $yellow;
+    }
+  }
+}
 
 #firstgem {
   display: block;

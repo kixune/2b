@@ -1,7 +1,8 @@
 <% provide(:title, "Users") %>
 
-<h1>Users</h1>
 
+<% if current_user.admin %>
+<h1>Users</h1>
 <table>
   <thead>
     <tr>
@@ -12,26 +13,20 @@
   </thead>
 
   <tbody>
-    <% if current_user.admin %>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% else %>
-      <tr>
-        <td>Look at you...
-        <br>Tryna get here like that..
-        </td>
+        <td><%= link_to 'Show', user, class: "btn" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: "btn" %></td>
+        <td><%= link_to 'Remove', user, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <%= link_to 'New User', new_user_path %>
+<% else %>
+    <h1>Nothing to see here!</h1>
+<% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
