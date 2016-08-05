@@ -1,2 +1,8 @@
-<h1>Gemstones#edit</h1>
-<p>Find me in app/views/gemstones/edit.html.erb</p>
+<% provide(:title, @gemstone.name) %>
+<% provide(:button_text, "Save Changes") %>
+<h1>Editing Gemstone</h1>
+
+<%= render 'partials/gemform', gemstone: @gemstone %>
+
+
+<%= link_to 'Back', gemstones_path %>

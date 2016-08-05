@@ -26,9 +26,15 @@ class GemstonesController < ApplicationController
   end
 
   def edit
+    @gemstone = Gemstone.find(params[:id])
   end
 
   def update
+    if @gemstone.update(gemstone_params)
+      redirect_to @gemstone
+    else
+      render 'edit'
+    end
   end
 
   def destroy
