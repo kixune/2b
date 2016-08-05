@@ -1,0 +1,22 @@
+<%= form_for(gemstone) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :version %>
+    <%= f.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %>
+    <%= f.text_area :summary %>
+  </div>
+
+  <div class="actions">
+  <%= f.submit yield(:button_text), class: "btn" %>
+  </div>
+<% end %>

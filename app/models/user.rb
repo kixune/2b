@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :chests, dependent: :destroy
   has_many :gemstones
+  has_many :chests, dependent: :destroy
   has_many :gemstones, through: :chests
 
   before_save { email.downcase! }

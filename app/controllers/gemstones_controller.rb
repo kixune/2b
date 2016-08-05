@@ -9,13 +9,11 @@ class GemstonesController < ApplicationController
   end
 
   def new
-    @gemstones = Gemstone.new
+    @gemstone = Gemstone.new
   end
 
   def create
-    @current_user = current_user;
-
-
+    @current_user = current_user
     @gemstone =  @current_user.gemstones.create(gemstone_params)
     if @gemstone.save
 
@@ -44,7 +42,7 @@ class GemstonesController < ApplicationController
     end
 
     def gemstone_params
-      params.require(:gemstone).permit(:name, :description)
+      params.require(:gemstone).permit(:name, :version, :summary)
     end
 
     def logged_in_user

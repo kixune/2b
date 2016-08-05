@@ -1,2 +1,6 @@
-<h1>Gemstones#new</h1>
-<p>Find me in app/views/gemstones/new.html.erb</p>
+<h1>New Gemstone</h1>
+<% provide(:button_text, "Create Gemstone") %>
+
+<%= render 'partials/gemform', gemstone: @gemstone %>
+
+<%= link_to 'Back', gemstones_path %>
