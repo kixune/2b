@@ -1,7 +1,7 @@
 class GemstonesController < ApplicationController
   before_action :set_gemstone, only: [:show,  :update, :destroy]
   before_action :logged_in_user, only: [:index, :show]
-  before_action :correct_user,   only: [:edit, :update]
+
 
 
   def index
