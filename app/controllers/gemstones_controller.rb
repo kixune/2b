@@ -16,7 +16,6 @@ class GemstonesController < ApplicationController
     @current_user = current_user
     @gemstone =  @current_user.gemstones.create(gemstone_params)
     if @gemstone.save
-
       redirect_to @gemstone
     else
       render 'new'
