@@ -1,2 +1,17 @@
-<h1>Gemstones#show</h1>
-<p>Find me in app/views/gemstones/show.html.erb</p>
+<p>
+  <strong>Name:</strong>
+  <%= @gemstone.name %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @gemstone.version %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @gemstone.summary %>
+</p>
+
+<p><%= link_to 'Documentation', '#' %></p>
+<%= link_to 'Back', gemstones_path %>
